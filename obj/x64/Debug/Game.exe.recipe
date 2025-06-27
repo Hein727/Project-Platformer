@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <ProjectOutputs>
+    <ProjectOutput>
+      <FullPath>C:\Users\2240705\Desktop\ゲームプログラミングⅢ・Ⅳ（配布）\ゲームプログラミングⅢ・Ⅳ（配布）\bin\x64\Debug\Game.exe</FullPath>
+    </ProjectOutput>
+  </ProjectOutputs>
+  <ContentFiles>
+    <ContentFile>
+      <FullPath>C:\Users\2240705\Desktop\ゲームプログラミングⅢ・Ⅳ（配布）\ゲームプログラミングⅢ・Ⅳ（配布）\Shader\DebugPS.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\2240705\Desktop\ゲームプログラミングⅢ・Ⅳ（配布）\ゲームプログラミングⅢ・Ⅳ（配布）\Shader\DebugVS.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\2240705\Desktop\ゲームプログラミングⅢ・Ⅳ（配布）\ゲームプログラミングⅢ・Ⅳ（配布）\Shader\ImGuiPS.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\2240705\Desktop\ゲームプログラミングⅢ・Ⅳ（配布）\ゲームプログラミングⅢ・Ⅳ（配布）\Shader\ImGuiVS.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\2240705\Desktop\ゲームプログラミングⅢ・Ⅳ（配布）\ゲームプログラミングⅢ・Ⅳ（配布）\Shader\LambertPS.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\2240705\Desktop\ゲームプログラミングⅢ・Ⅳ（配布）\ゲームプログラミングⅢ・Ⅳ（配布）\Shader\LambertVS.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\2240705\Desktop\ゲームプログラミングⅢ・Ⅳ（配布）\ゲームプログラミングⅢ・Ⅳ（配布）\Shader\LinePS.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\2240705\Desktop\ゲームプログラミングⅢ・Ⅳ（配布）\ゲームプログラミングⅢ・Ⅳ（配布）\Shader\LineVS.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\2240705\Desktop\ゲームプログラミングⅢ・Ⅳ（配布）\ゲームプログラミングⅢ・Ⅳ（配布）\Shader\SpritePS.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\2240705\Desktop\ゲームプログラミングⅢ・Ⅳ（配布）\ゲームプログラミングⅢ・Ⅳ（配布）\Shader\SpriteVS.cso</FullPath>
+    </ContentFile>
+  </ContentFiles>
+  <SatelliteDlls />
+  <NonRecipeFileRefs />
+</Project>
