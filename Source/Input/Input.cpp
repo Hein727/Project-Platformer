@@ -15,3 +15,11 @@ void Input::Update()
 	gamePad.Update();
 	mouse.Update();
 }
+
+POINT Input::GetMousePosition(HWND hWnd) const
+{
+	POINT pt;
+	GetCursorPos(&pt);
+	ScreenToClient(hWnd, &pt);
+	return pt;
+}

@@ -155,3 +155,79 @@ LRESULT CALLBACK Framework::HandleMessage(HWND hWnd, UINT msg, WPARAM wParam, LP
 	}
 	return 0;
 }
+
+// --- レイ生成（スクリーン座標→ワールド空間） ---
+void Framework::ComputeMouseRay(XMVECTOR& rayOrigin, XMVECTOR& rayDir)
+{
+	POINT p = input.GetMousePosition(hWnd);
+	RECT rect;
+	GetClientRect(hWnd, &rect);
+
+	float mouseX = static_cast<float>(p.x) / (rect.right - rect.left) * 2.0f - 1.0f;
+	float mouseY = static_cast<float>(p.y) / (rect.bottom - rect.top) * -2.0f + 1.0f;
+
+	XMMATRIX proj = XMMatrixPerspectiveFovLH(XM_PIDIV4, 16.0f / 9.0f, 0.1f, 100.0f);
+	XMMATRIX view = XMMatrixLookAtLH({ 0,0,-10 }, { 0,0,0 }, { 0,1,0 });
+
+	XMMATRIX viewProjInv = XMMatrixInverse(nullptr, view * proj);
+
+	XMVECTOR nearPoint = XMVectorSet(mouseX, mouseY, 0.0f, 1.0f);
+	XMVECTOR farPoint = XMVectorSet(mouseX, mouseY, 1.0f, 1.0f);
+
+	nearPoint = XMVector3TransformCoord(nearPoint, viewProjInv);
+	farPoint = XMVector3TransformCoord(farPoint, viewProjInv);
+
+	rayOrigin = nearPoint;
+	rayDir = XMVector3Normalize(farPoint - nearPoint);
+}
+
+// --- レイとAABBの交差判定（簡易版） ---
+bool Framework::RayIntersectsAABB(const XMVECTOR& rayOrigin, const XMVECTOR& rayDir, const AABB& box, float& distanceOut)
+{
+	XMFLOAT3 origin, dir;
+	XMStoreFloat3(&origin, rayOrigin);
+	XMStoreFloat3(&dir, rayDir);
+
+	XMFLOAT3 bmin = box.min;
+	XMFLOAT3 bmax = box.max;
+
+	float tmin = 0.0f;
+	float tmax = 99999999.0f; // 数字を十分に大きくして max() の代用
+
+	for (int i = 0; i < 3; ++i)
+	{
+		float o = (i == 0) ? origin.x : (i == 1) ? origin.y : origin.z;
+		float d = (i == 0) ? dir.x : (i == 1) ? dir.y : dir.z;
+		float b0 = (i == 0) ? bmin.x : (i == 1) ? bmin.y : bmin.z;
+		float b1 = (i == 0) ? bmax.x : (i == 1) ? bmax.y : bmax.z;
+
+		if (fabs(d) < 1e-8f)
+		{
+			if (o < b0 || o > b1)
+				return false;
+		}
+		else
+		{
+			float ood = 1.0f / d;
+			float t1 = (b0 - o) * ood;
+			float t2 = (b1 - o) * ood;
+
+			// swap t1, t2 if needed（小さいほうを t1 に）
+			if (t1 > t2)
+			{
+				float temp = t1;
+				t1 = t2;
+				t2 = temp;
+			}
+
+			if (t1 > tmin) tmin = t1;
+			if (t2 < tmax) tmax = t2;
+
+			if (tmin > tmax)
+				return false;
+		}
+	}
+
+	distanceOut = tmin;
+	return true;
+}

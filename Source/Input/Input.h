@@ -17,6 +17,12 @@ public:
 	// 更新処理
 	void Update();
 
+	// 追加：マウスの参照取得
+	const Mouse& GetMouse() const { return mouse; }
+
+	// 追加：マウスの現在位置取得
+	POINT GetMousePosition(HWND hWnd) const;
+
 	// ゲームパッド取得
 	GamePad& GetGamePad() { return gamePad; }
 
