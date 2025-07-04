@@ -123,6 +123,9 @@
     <ClInclude Include="Source\Level_Loader.h">
       <Filter>Source</Filter>
     </ClInclude>
+    <ClInclude Include="Source\Camera.h">
+      <Filter>Source</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="External\imgui\imgui.cpp">
@@ -201,6 +204,9 @@
       <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="Source\Level_Loader.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Camera.cpp">
       <Filter>Source</Filter>
     </ClCompile>
   </ItemGroup>
