@@ -4,12 +4,12 @@
 class Character
 {
 public:
-	Character();
+	Character() {};
 	virtual ~Character() {};
 
 	void UpdateTransform();
 
-private :
+protected :
 	DirectX::XMFLOAT3 position = { 0,0,0 };
 	DirectX::XMFLOAT3 rotation = { 0,0,0 };
 	DirectX::XMFLOAT3 scale = { 1,1,1 };

@@ -118,6 +118,7 @@
     <ClInclude Include="Source\Audio\AudioResource.h" />
     <ClInclude Include="Source\Audio\AudioSource.h" />
     <ClInclude Include="Source\Camera.h" />
+    <ClInclude Include="Source\Camera_Controller.h" />
     <ClInclude Include="Source\Character.h" />
     <ClInclude Include="Source\Framework.h" />
     <ClInclude Include="Source\Graphics\DebugRenderer.h" />
@@ -137,6 +138,7 @@
     <ClInclude Include="Source\Level_Loader.h" />
     <ClInclude Include="Source\Logger.h" />
     <ClInclude Include="Source\Misc.h" />
+    <ClInclude Include="Source\Player.h" />
     <ClInclude Include="Source\SceneGame.h" />
     <ClInclude Include="Source\Stage.h" />
     <ClInclude Include="Source\Transform.h" />
@@ -151,6 +153,7 @@
     <ClCompile Include="Source\Audio\AudioResource.cpp" />
     <ClCompile Include="Source\Audio\AudioSource.cpp" />
     <ClCompile Include="Source\Camera.cpp" />
+    <ClCompile Include="Source\Camera_Controller.cpp" />
     <ClCompile Include="Source\Character.cpp" />
     <ClCompile Include="Source\Framework.cpp" />
     <ClCompile Include="Source\Graphics\DebugRenderer.cpp" />
@@ -167,6 +170,7 @@
     <ClCompile Include="Source\Level_Loader.cpp" />
     <ClCompile Include="Source\Logger.cpp" />
     <ClCompile Include="Source\Main.cpp" />
+    <ClCompile Include="Source\Player.cpp" />
     <ClCompile Include="Source\SceneGame.cpp" />
     <ClCompile Include="Source\Stage.cpp" />
   </ItemGroup>

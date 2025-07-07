@@ -1,13 +1,29 @@
 #include "Graphics/Graphics.h"
 #include "SceneGame.h"
 #include "Transform.h"
-
+#include "Camera.h"
 
 
 // 初期化
 void SceneGame::Initialize()
 {
 	stage = std::make_unique<Stage>();
+
+	player = std::make_unique<Player>();
+
+	Graphics& graphics = Graphics::Instance();
+	Camera& camera = Camera::Instance();
+	camera.SetLookAt(
+		DirectX::XMFLOAT3(0, 10, -10),
+		DirectX::XMFLOAT3(0, 0, 0),
+		DirectX::XMFLOAT3(0, 1, 0)
+	);
+	camera.SetPerspectiveFov(
+		DirectX::XMConvertToRadians(45),
+		graphics.GetScreenWidth() / graphics.GetScreenHeight(),
+		0.1f,
+		1000.0f
+	);
 }
 
 // 終了化
@@ -20,7 +36,7 @@ void SceneGame::Update(float elapsedTime)
 {
 	stage->Update(elapsedTime);
 
-	
+	player->Update(elapsedTime);
 }
 
 
@@ -43,33 +59,15 @@ void SceneGame::Render()
 	RenderContext rc;
 	rc.lightDirection = { 0.0f, -1.0f, 0.0f, 0.0f };	// ライト方向（下方向）
 
-	// ビュー行列
-	{
-		DirectX::XMFLOAT3 eye = { 0, 10, -10 };	// カメラの視点（位置）
-		DirectX::XMFLOAT3 focus = { 0, 0, 0 };	// カメラの注視点（ターゲット）
-		DirectX::XMFLOAT3 up = { 0, 1, 0 };		// カメラの上方向
-
-		DirectX::XMVECTOR Eye = DirectX::XMLoadFloat3(&eye);
-		DirectX::XMVECTOR Focus = DirectX::XMLoadFloat3(&focus);
-		DirectX::XMVECTOR Up = DirectX::XMLoadFloat3(&up);
-		DirectX::XMMATRIX View = DirectX::XMMatrixLookAtLH(Eye, Focus, Up);
-		DirectX::XMStoreFloat4x4(&rc.view, View);
-	}
-	// プロジェクション行列
-	{
-		float fovY = DirectX::XMConvertToRadians(45);	// 視野角
-		float aspectRatio = graphics.GetScreenWidth() / graphics.GetScreenHeight();	// 画面縦横比率
-		float nearZ = 0.1f;	// カメラが映し出すの最近距離
-		float farZ = 1000.0f;	// カメラが映し出すの最遠距離
-		DirectX::XMMATRIX Projection = DirectX::XMMatrixPerspectiveFovLH(fovY, aspectRatio, nearZ, farZ);
-		DirectX::XMStoreFloat4x4(&rc.projection, Projection);
-	}
+	rc.view = Camera::Instance().GetView();
+	rc.projection = Camera::Instance().GetProjection();
 
 	// 3Dモデル描画
 	{
 		Shader* shader = graphics.GetShader();
 		shader->Begin(dc, rc);
 		stage.get()->Render(dc, shader);
+		player.get()->Render(dc, shader);
 		shader->End(dc);
 	}
 

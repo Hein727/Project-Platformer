@@ -1,7 +1,7 @@
 #pragma once
 #include "Stage.h"
 #include <memory>
-
+#include "Player.h"
 
 
 // ƒQ[ƒ€ƒV[ƒ“
@@ -27,6 +27,8 @@ public:
 private :
 	
 	std::unique_ptr<Stage> stage;
+
+	std::unique_ptr<Player> player;
 
 	/*Transform dummyCubeTransform;*/
 };
