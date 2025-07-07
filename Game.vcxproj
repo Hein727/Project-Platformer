@@ -139,6 +139,7 @@
     <ClInclude Include="Source\Misc.h" />
     <ClInclude Include="Source\SceneGame.h" />
     <ClInclude Include="Source\Stage.h" />
+    <ClInclude Include="Source\Transform.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="External\DirectXTex\WICTextureLoader.cpp" />

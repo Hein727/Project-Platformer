@@ -1,5 +1,8 @@
 #include "Graphics/Graphics.h"
 #include "SceneGame.h"
+#include "Transform.h"
+
+
 
 // 初期化
 void SceneGame::Initialize()
@@ -15,8 +18,12 @@ void SceneGame::Finalize()
 // 更新処理
 void SceneGame::Update(float elapsedTime)
 {
-	stage.get()->Update(elapsedTime);
+	stage->Update(elapsedTime);
+
+	
 }
+
+
 
 // 描画処理
 void SceneGame::Render()
@@ -67,14 +74,34 @@ void SceneGame::Render()
 	}
 
 	// 3Dデバッグ描画
-	{
-		// ラインレンダラ描画実行
-		graphics.GetLineRenderer()->Render(dc, rc.view, rc.projection);
+	//{
+	//	// Transform → 行列に変換
+	//	using namespace DirectX;
 
-		// デバッグレンダラ描画実行
-		graphics.GetDebugRenderer()->Render(dc, rc.view, rc.projection);
-	}
+	//	XMMATRIX matScale = XMMatrixScaling(
+	//		dummyCubeTransform.scale.x,
+	//		dummyCubeTransform.scale.y,
+	//		dummyCubeTransform.scale.z
+	//	);
+	//	XMMATRIX matRot = XMMatrixRotationRollPitchYaw(
+	//		dummyCubeTransform.rotation.x,
+	//		dummyCubeTransform.rotation.y,
+	//		dummyCubeTransform.rotation.z
+	//	);
+	//	XMMATRIX matTrans = XMMatrixTranslation(
+	//		dummyCubeTransform.position.x,
+	//		dummyCubeTransform.position.y,
+	//		dummyCubeTransform.position.z
+	//	);
+	//	XMMATRIX world = matScale * matRot * matTrans;
 
+	//	// DebugRenderer でダミーキューブ描画
+	//	graphics.GetDebugRenderer()->AddBox(
+	//		dummyCubeTransform.position,
+	//		dummyCubeTransform.scale,
+	//		{ 1, 1, 0, 1 } // 黄色
+	//	);
+	//}
 	// 2Dスプライト描画
 	{
 
@@ -82,6 +109,11 @@ void SceneGame::Render()
 
 	// 2DデバッグGUI描画
 	{
-
+	// ImGui で Transform を編集できるようにする
+	ImGui::Begin("Transform Editor");
+	/*ImGui::SliderFloat3("Position", &dummyCubeTransform.position.x, -10.0f, 10.0f);
+	ImGui::SliderFloat3("Rotation", &dummyCubeTransform.rotation.x, -DirectX::XM_PI, DirectX::XM_PI);
+	ImGui::SliderFloat3("Scale", &dummyCubeTransform.scale.x, 0.1f, 5.0f);*/
+	ImGui::End();
 	}
 }

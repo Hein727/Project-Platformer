@@ -2,6 +2,7 @@
 #include <memory>
 #include "Misc.h"
 #include "Graphics/DebugRenderer.h"
+#include "DebugRenderer.h"
 
 DebugRenderer::DebugRenderer(ID3D11Device* device)
 {
@@ -364,3 +365,49 @@ void DebugRenderer::CreateCylinderMesh(ID3D11Device* device, float radius1, floa
 		_ASSERT_EXPR(SUCCEEDED(hr), HRTrace(hr));
 	}
 }
+
+//void DebugRenderer::AddBox(const DirectX::XMFLOAT3& position, const DirectX::XMFLOAT3& size, const DirectX::XMFLOAT4& color)
+//{
+//	using namespace DirectX;
+//
+//	// サイズの半分を計算
+//	XMFLOAT3 halfSize = {
+//		size.x * 0.5f,
+//		size.y * 0.5f,
+//		size.z * 0.5f
+//	};
+//
+//	// 8頂点
+//	XMFLOAT3 corners[8] = {
+//		{ -halfSize.x, -halfSize.y, -halfSize.z },
+//		{  halfSize.x, -halfSize.y, -halfSize.z },
+//		{  halfSize.x,  halfSize.y, -halfSize.z },
+//		{ -halfSize.x,  halfSize.y, -halfSize.z },
+//		{ -halfSize.x, -halfSize.y,  halfSize.z },
+//		{  halfSize.x, -halfSize.y,  halfSize.z },
+//		{  halfSize.x,  halfSize.y,  halfSize.z },
+//		{ -halfSize.x,  halfSize.y,  halfSize.z },
+//	};
+//
+//	// 位置オフセットを適用
+//	for (int i = 0; i < 8; ++i) {
+//		corners[i].x += position.x;
+//		corners[i].y += position.y;
+//		corners[i].z += position.z;
+//	}
+//
+//	// 12本のエッジを描画
+//	int edges[12][2] = {
+//		{0,1},{1,2},{2,3},{3,0}, // 下
+//		{4,5},{5,6},{6,7},{7,4}, // 上
+//		{0,4},{1,5},{2,6},{3,7}  // 側面
+//	};
+//
+//	for (int i = 0; i < 12; ++i) {
+//		Line line;
+//		line.start = corners[edges[i][0]];
+//		line.end = corners[edges[i][1]];
+//		line.color = color;
+//		lines.push_back(line);
+//	}
+//}

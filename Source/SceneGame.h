@@ -2,6 +2,8 @@
 #include "Stage.h"
 #include <memory>
 
+
+
 // ƒQ[ƒ€ƒV[ƒ“
 class SceneGame
 {
@@ -21,7 +23,10 @@ public:
 	// •`‰æˆ—
 	void Render();
 
+
 private :
 	
 	std::unique_ptr<Stage> stage;
+
+	/*Transform dummyCubeTransform;*/
 };

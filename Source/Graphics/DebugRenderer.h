@@ -21,6 +21,8 @@ public:
 	// ‰~’Œ•`‰æ
 	void DrawCylinder(const DirectX::XMFLOAT3& position, float radius, float height, const DirectX::XMFLOAT4& color);
 
+	//void AddBox(const DirectX::XMFLOAT3& position, const DirectX::XMFLOAT3& size, const DirectX::XMFLOAT4& color);
+
 private:
 	// ‹…ƒƒbƒVƒ…ì¬
 	void CreateSphereMesh(ID3D11Device* device, float radius, int slices, int stacks);
@@ -49,6 +51,15 @@ private:
 		float				radius;
 		float				height;
 	};
+
+	//struct Line
+	//{
+	//	DirectX::XMFLOAT3 start;
+	//	DirectX::XMFLOAT3 end;
+	//	DirectX::XMFLOAT4 color;
+	//};
+
+	//std::vector<Line> lines;
 
 	Microsoft::WRL::ComPtr<ID3D11Buffer>			sphereVertexBuffer;
 	Microsoft::WRL::ComPtr<ID3D11Buffer>			cylinderVertexBuffer;

@@ -1,10 +1,8 @@
-﻿  Framework.cpp
-  Input.cpp
-  Main.cpp
+﻿  SceneGame.cpp
      ライブラリ bin\x64\Release\Game.lib とオブジェクト bin\x64\Release\Game.exp を作成中
   コード生成しています。
-  39 of 4030 functions ( 1.0%) were compiled, the rest were copied from previous compilation.
+  5 of 4016 functions ( 0.1%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
-    52 functions had inline decision re-evaluated but remain unchanged
+    23 functions had inline decision re-evaluated but remain unchanged
   コード生成が終了しました。
   Game.vcxproj -> C:\Users\2240178\Desktop\Project-Platformer\bin\x64\Release\Game.exe

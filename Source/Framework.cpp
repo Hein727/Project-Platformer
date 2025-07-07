@@ -5,6 +5,7 @@
 #include "Input/Input.h"
 #include "SceneGame.h"
 #include "Framework.h"
+#include "Transform.h"
 
 static SceneGame sceneGame;
 
@@ -35,6 +36,24 @@ void Framework::Update(float elapsedTime/*Elapsed seconds from last frame*/)
 	// シーン更新処理
 	sceneGame.Update(elapsedTime);
 }
+//
+//void ShowTransformEditor(Transform& transform)
+//{
+//	if (ImGui::Begin("Transform Inspector"))
+//	{
+//		ImGui::Text("Position");
+//		ImGui::DragFloat3("##Position", reinterpret_cast<float*>(&transform.position), 0.1f);
+//
+//		ImGui::Text("Rotation");
+//		ImGui::DragFloat3("##Rotation", reinterpret_cast<float*>(&transform.rotation), 1.0f);
+//
+//		ImGui::Text("Scale");
+//		ImGui::DragFloat3("##Scale", reinterpret_cast<float*>(&transform.scale), 0.1f);
+//	}
+//	ImGui::End();
+//}
+//static Transform dummyCubeTransform;
+
 
 // 描画処理
 void Framework::Render(float elapsedTime/*Elapsed seconds from last frame*/)
@@ -43,18 +62,46 @@ void Framework::Render(float elapsedTime/*Elapsed seconds from last frame*/)
 
 	// IMGUIフレーム開始処理
 	graphics.GetImGuiRenderer()->NewFrame();
+	
 
-	// シーン描画処理
+	// --- シーン描画処理 ---
 	sceneGame.Render();
 
-	// IMGUIデモウインドウ描画（IMGUI機能テスト用）
-	//ImGui::ShowDemoWindow();
+	//// Transform Inspector ウィンドウを常に表示
+	//	ImGui::Begin("Transform Inspector");
+	//ImGui::Text("No object selected.");
+	//ImGui::End();
+	// Transform Inspector ウィンドウ
+	ImGui::Begin("Transform Inspector");
 
-	// IMGUI描画
+	// 位置の編集
+	ImGui::Text("Position");
+	//ImGui::DragFloat3("##Position", reinterpret_cast<float*>(&dummyCubeTransform.position), 0.1f);
+
+	// 回転の編集
+	ImGui::Text("Rotation");
+	//ImGui::DragFloat3("##Rotation", reinterpret_cast<float*>(&dummyCubeTransform.rotation), 1.0f);
+
+	// スケールの編集
+	ImGui::Text("Scale");
+	//ImGui::DragFloat3("##Scale", reinterpret_cast<float*>(&dummyCubeTransform.scale), 0.1f);
+
+	ImGui::End();
+
+
+	graphics.GetImGuiRenderer()->NewFrame();
+
+	sceneGame.Render();
+
+	/*ShowTransformEditor(dummyCubeTransform);*/
+
+	// --- IMGUI描画 ---
 	graphics.GetImGuiRenderer()->Render(dc);
 
 	// バックバッファに描画した画を画面に表示する。
 	graphics.GetSwapChain()->Present(syncInterval, 0);
+
+
 }
 
 // フレームレート計算

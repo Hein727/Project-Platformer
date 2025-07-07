@@ -8,6 +8,7 @@
 #include "Input/input.h"
 #include<DirectXMAth.h>
 
+
 using namespace DirectX;
 
 struct ImVec3
@@ -17,23 +18,18 @@ struct ImVec3
 	ImVec3(float _x, float _y, float _z) : x(_x), y(_y), z(_z) {}
 };
 
-struct Transform {
-	ImVec3 position = { 0, 0, 0 };
-	ImVec3 rotation = { 0, 0, 0 };
-	ImVec3 scale = { 1, 1, 1 };
-};
-
-
 struct AABB {
 	XMFLOAT3 min;
 	XMFLOAT3 max;
 };
 
 
-struct GameObject {
-	Transform transform;
-	AABB aabb;
-};
+//struct GameObject {
+//	DirectX::XMFLOAT3 position = { 0, 0, 0 };
+//	DirectX::XMFLOAT3 rotation = { 0, 0, 0 };
+//	DirectX::XMFLOAT3 scale = { 1, 1, 1 };
+//	AABB aabb;
+//};
 
 
 class Framework
