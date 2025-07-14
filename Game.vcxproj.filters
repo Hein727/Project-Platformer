@@ -135,6 +135,18 @@
     <ClInclude Include="Source\Camera_Controller.h">
       <Filter>Source</Filter>
     </ClInclude>
+    <ClInclude Include="Source\AABBChecker.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\LevelEditorTools.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Terrain_Material.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Geometry.h">
+      <Filter>Source</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="External\imgui\imgui.cpp">
@@ -222,6 +234,18 @@
       <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="Source\Camera_Controller.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\AABBChecker.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\LevelEditorTools.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Terrain_Material.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Geometry.cpp">
       <Filter>Source</Filter>
     </ClCompile>
   </ItemGroup>

@@ -2,6 +2,7 @@
 #include "Camera.h"
 #include "Input/GamePad.h"
 #include "Input/Input.h"
+#include "Camera_Controller.h"
 #define KEY_SPACE VK_SPACE 
 
 Player::Player()
@@ -13,6 +14,9 @@ Player::Player()
 
 void Player::Update(float elapsedTime)
 {
+#ifdef NDEBUG
+	Camera_Controller& camera_controller = Camera_Controller::Camera_Controller();
+
 	GamePad& gamePad = Input::Instance().GetGamePad();
 
 	float ax = gamePad.GetAxisLX();
@@ -46,13 +50,11 @@ void Player::Update(float elapsedTime)
 		isJumping = false;
 	}
 
-	Camera& camera = Camera::Instance();
+	camera_controller.SetTarget(position);
+	camera_controller.Update(elapsedTime);
 
-	DirectX::XMFLOAT3 eye = { position.x, position.y + 2, -10.0f };
-	DirectX::XMFLOAT3 focus = { position.x, position.y,	0.0f };
-	DirectX::XMFLOAT3 up = { 0.0f, 1.0f, 0.0f };
+#endif // 
 
-	camera.SetLookAt(eye, focus, up);
 
 	UpdateTransform();
 

@@ -11,6 +11,8 @@ Graphics::Graphics(HWND hWnd)
 	_ASSERT_EXPR(instance == nullptr, "already instantiated");
 	instance = this;
 
+	this->hWnd = hWnd;
+
 	// 画面のサイズを取得する。
 	RECT rc;
 	GetClientRect(hWnd, &rc);

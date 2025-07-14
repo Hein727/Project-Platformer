@@ -51,9 +51,12 @@ public:
 	// ImGuiƒŒƒ“ƒ_ƒ‰Žæ“¾
 	ImGuiRenderer* GetImGuiRenderer() const { return imguiRenderer.get(); }
 
+	
+	HWND GetWindow() const { return hWnd; }
+
 private:
 	static Graphics*								instance;
-
+	HWND											hWnd = nullptr;
 	Microsoft::WRL::ComPtr<ID3D11Device>			device;
 	Microsoft::WRL::ComPtr<ID3D11DeviceContext>		immediateContext;
 	Microsoft::WRL::ComPtr<IDXGISwapChain>			swapchain;
