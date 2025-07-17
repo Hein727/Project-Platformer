@@ -6,6 +6,8 @@
 #include "Camera_Controller.h"
 #include "Input/GamePad.h"
 #include "Input/Input.h"
+#include "Level_Loader.h"
+#include <string>
 
 
 // 初期化
@@ -14,6 +16,79 @@ void SceneGame::Initialize()
 	stage = std::make_unique<Stage>();
 
 	player = std::make_unique<Player>();
+
+	Level_Loader& levelLoader = Level_Loader::Instance();
+
+	levelLoader.Load();
+
+	auto& save_data = levelLoader.getSaveData();
+
+	for (auto& save : save_data)
+	{
+		if (save.name == "BLOCK")
+		{
+			Block block;
+			block.SetPosition(save.position);
+			block.SetScale(save.scale);
+			blocks.push_back(std::move(block));
+		}
+		if (save.name == "GROUND_BLOCK")
+		{
+			Ground_Block block;
+			block.SetPosition(save.position);
+			block.SetScale(save.scale);
+			ground_blocks.push_back(std::move(block));
+		}
+		if (save.name == "SLOPE")
+		{
+			Slope block;
+			block.SetPosition(save.position);
+			block.SetScale(save.scale);
+			slopes.push_back(std::move(block));
+		}
+		if (save.name == "SPIKE")
+		{
+			Spike block;
+			block.SetPosition(save.position);
+			block.SetScale(save.scale);
+			spikes.push_back(std::move(block));
+		}
+		if (save.name == "FLAG")
+		{
+			Flag block;
+			block.SetPosition(save.position);
+			block.SetScale(save.scale);
+			flags.push_back(std::move(block));
+		}
+		if (save.name == "FLOATING_PLATFORM")
+		{
+			FloatingPlatform block;
+			block.SetPosition(save.position);
+			block.SetScale(save.scale);
+			floatingplatforms.push_back(std::move(block));
+		}
+		if (save.name == "ARCHWAY")
+		{
+			Archway block;
+			block.SetPosition(save.position);
+			block.SetScale(save.scale);
+			archways.push_back(std::move(block));
+		}
+		if (save.name == "BOX")
+		{
+			Box block;
+			block.SetPosition(save.position);
+			block.SetScale(save.scale);
+			boxes.push_back(std::move(block));
+		}
+		if (save.name == "PLAYER")
+		{
+			player->SetPosition(save.position);
+			player->SetRotation(save.rotation);
+			player->SetScale(save.scale);
+		}
+	}
+	save_data.clear();
 
 	Graphics& graphics = Graphics::Instance();
 	Camera& camera = Camera::Instance();
@@ -33,6 +108,45 @@ void SceneGame::Initialize()
 // 終了化
 void SceneGame::Finalize()
 {
+	Level_Loader& levelLoader = Level_Loader::Instance();
+
+	auto& saveData = levelLoader.getSaveData();
+
+	for (auto& block : blocks)
+	{
+		saveData.emplace_back("BLOCK", block.GetPosition(), block.GetRotation(), block.GetScale());
+	}
+	for (auto& block : ground_blocks)
+	{
+		saveData.emplace_back("GROUND_BLOCK", block.GetPosition(), block.GetRotation(), block.GetScale());
+	}
+	for (auto& block : slopes)
+	{
+		saveData.emplace_back("SLOPE", block.GetPosition(), block.GetRotation(), block.GetScale());
+	}
+	for (auto& block : spikes)
+	{
+		saveData.emplace_back("SPIKE", block.GetPosition(), block.GetRotation(), block.GetScale());
+	}
+	for (auto& block : flags)
+	{
+		saveData.emplace_back("FLAG", block.GetPosition(), block.GetRotation(), block.GetScale());
+	}
+	for (auto& block : floatingplatforms)
+	{
+		saveData.emplace_back("FLOATING_PLATFORM", block.GetPosition(), block.GetRotation(), block.GetScale());
+	}
+	for (auto& block : archways)
+	{
+		saveData.emplace_back("ARCHWAY", block.GetPosition(), block.GetRotation(), block.GetScale());
+	}
+	for (auto& block : boxes)
+	{
+		saveData.emplace_back("BOX", block.GetPosition(), block.GetRotation(), block.GetScale());
+	}
+	
+
+	levelLoader.SaveInTxt();
 }
 
 // 更新処理
@@ -43,8 +157,6 @@ void SceneGame::Update(float elapsedTime)
 	player->Update(elapsedTime);
 
 #ifdef _DEBUG
-
-	auto selected_type = 0;
 
 	if (GetAsyncKeyState('1') & 0x8000)
 	{
@@ -78,83 +190,209 @@ void SceneGame::Update(float elapsedTime)
 	{
 		selected_type = BOX;
 	}
-
-
-	if (GetAsyncKeyState(VK_LBUTTON) & 0x01)
+	if (GetAsyncKeyState('0') & 0x8000)
 	{
-		LevelEditorTools& leveleditor = LevelEditorTools::Instance();
+		selected_type = DEL;
+	}
 
-		auto pos = leveleditor.placeObject();
 
+	LevelEditorTools& leveleditor = LevelEditorTools::Instance();
+
+	bool mousePressed = false;
+
+	cursorPos = leveleditor.placeObject(&mousePressed);
+
+	if (mousePressed)
+	{
 		switch (selected_type)
 		{
 		case BLOCK:
 		{
 			Block block;
-			block.SetPosition(pos);
-			block.SetScale({ 0.1f, 0.1f, 0.1f });
+			block.SetPosition(cursorPos);
+			block.SetScale({ 0.01f, 0.01f, 0.01f });
 			blocks.push_back(std::move(block));
 			break;
 		}
 		case GROUND_BLOCK:
 		{
 			Ground_Block block;
-			block.SetPosition(pos);
-			block.SetScale({ 0.1f, 0.1f, 0.1f });
+			block.SetPosition(cursorPos);
+			block.SetScale({ 0.005f, 0.005f, 0.005f });
 			ground_blocks.push_back(std::move(block));
 			break;
 		}
 		case SLOPE:
 		{
 			Slope block;
-			block.SetPosition(pos);
-			block.SetScale({ 0.1f, 0.1f, 0.1f });
+			block.SetPosition(cursorPos);
+			block.SetScale({ 0.01f, 0.01f, 0.01f });
 			slopes.push_back(std::move(block));
 			break;
 		}
 		case SPIKE:
 		{
 			Spike block;
-			block.SetPosition(pos);
-			block.SetScale({ 0.1f, 0.1f, 0.1f });
+			block.SetPosition(cursorPos);
+			block.SetScale({ 0.01f, 0.01f, 0.01f });
 			spikes.push_back(std::move(block));
 			break;
 		}
 		case FLAG:
 		{
 			Flag block;
-			block.SetPosition(pos);
-			block.SetScale({ 0.1f, 0.1f, 0.1f });
+			block.SetPosition(cursorPos);
+			block.SetScale({ 0.01f, 0.01f, 0.01f });
 			flags.push_back(std::move(block));
 			break;
 		}
 		case ARCHWAY:
 		{
 			Archway block;
-			block.SetPosition(pos);
-			block.SetScale({ 0.1f, 0.1f, 0.1f });
+			block.SetPosition(cursorPos);
+			block.SetScale({ 0.005f, 0.005f, 0.005f });
 			archways.push_back(std::move(block));
 			break;
 		}
 		case FLOATINGPLATFORM:
 		{
 			FloatingPlatform block;
-			block.SetPosition(pos);
-			block.SetScale({ 0.1f, 0.1f, 0.1f });
+			block.SetPosition(cursorPos);
+			block.SetScale({ 0.01f, 0.01f, 0.01f });
 			floatingplatforms.push_back(std::move(block));
 			break;
 		}
 		case BOX:
 		{
 			Box block;
-			block.SetPosition(pos);
-			block.SetScale({ 0.1f, 0.1f, 0.1f });
+			block.SetPosition(cursorPos);
+			block.SetScale({ 0.01f, 0.01f, 0.01f });
 			boxes.push_back(std::move(block));
 			break;
 		}
+		case DEL:
+		{
+			for (auto it = blocks.begin(); it != blocks.end();)
+			{
+				HitBox& box = it->getHitBox();
+
+				if (leveleditor.objectDelete(box, cursorPos))
+				{
+					it = blocks.erase(it);
+				}
+				else
+				{
+					it++;
+				}
+			}
+			for (auto it = ground_blocks.begin(); it != ground_blocks.end();)
+			{
+				HitBox& box = it->getHitBox();
+
+				bool check = leveleditor.objectDelete(box, cursorPos);
+
+				if (check)
+				{
+					it = ground_blocks.erase(it);
+				}
+				else
+				{
+					it++;
+				}
+			}
+			for (auto it = slopes.begin(); it != slopes.end();)
+			{
+				HitBox& box = it->getHitBox();
+
+				bool check = leveleditor.objectDelete(box, cursorPos);
+
+				if (check)
+				{
+					it = slopes.erase(it);
+				}
+				else
+				{
+					it++;
+				}
+			}
+			for (auto it = spikes.begin(); it != spikes.end();)
+			{
+				HitBox& box = it->getHitBox();
+
+				bool check = leveleditor.objectDelete(box, cursorPos);
+
+				if (check)
+				{
+					it = spikes.erase(it);
+				}
+				else
+				{
+					it++;
+				}
+			}
+			for (auto it = flags.begin(); it != flags.end();)
+			{
+				HitBox& box = it->getHitBox();
+
+				bool check = leveleditor.objectDelete(box, cursorPos);
+
+				if (check)
+				{
+					it = flags.erase(it);
+				}
+				else
+				{
+					it++;
+				}
+			}
+			for (auto it = archways.begin(); it != archways.end();)
+			{
+				HitBox& box = it->getHitBox();
+
+				bool check = leveleditor.objectDelete(box, cursorPos);
+
+				if (check)
+				{
+					it = archways.erase(it);
+				}
+				else
+				{
+					it++;
+				}
+			}
+			for (auto it = floatingplatforms.begin(); it != floatingplatforms.end();)
+			{
+				HitBox& box = it->getHitBox();
+
+				bool check = leveleditor.objectDelete(box, cursorPos);
+
+				if (check)
+				{
+					it = floatingplatforms.erase(it);
+				}
+				else
+				{
+					it++;
+				}
+			}
+			for (auto it = boxes.begin(); it != boxes.end();)
+			{
+				HitBox& box = it->getHitBox();
+
+				bool check = leveleditor.objectDelete(box, cursorPos);
+
+				if (check)
+				{
+					it = boxes.erase(it);
+				}
+				else
+				{
+					it++;
+				}
+			}
+		}
 		}
 	}
-
 	Camera_Controller camera_controller;
 	camera_controller.Update(elapsedTime);
 
@@ -220,8 +458,8 @@ void SceneGame::Render()
 	{
 		Shader* shader = graphics.GetShader();
 		shader->Begin(dc, rc);
-		stage.get()->Render(dc, shader);
-		player.get()->Render(dc, shader);
+		//stage.get()->Render(dc, shader);
+		//player.get()->Render(dc, shader);
 
 		//rendering terrain
 		for (auto& block : blocks)
@@ -259,10 +497,11 @@ void SceneGame::Render()
 		shader->End(dc);
 	}
 
-	// 3Dデバッグ描画
-	//{
+	 //3Dデバッグ描画
+	{
 
-	//}
+	}
+
 	// 2Dスプライト描画
 	{
 
@@ -270,6 +509,54 @@ void SceneGame::Render()
 
 	// 2DデバッグGUI描画
 	{
+		static const char* name = "None";
+
+		ImGui::Begin("Selected Block");
+
+		switch (selected_type)
+		{
+		case BLOCK:
+			name = "BLOCK";
+			break;
+
+		case GROUND_BLOCK:
+			name = "GROUND_BLOCK";
+			break;
+
+		case SLOPE:
+			name = "SLOPE";
+			break;
+
+		case SPIKE:
+			name = "SPIKE";
+			break;
+
+		case FLAG:
+			name = "FLAG";
+			break;
+
+		case ARCHWAY:
+			name = "ARCHWAY";
+			break;
+
+		case FLOATINGPLATFORM:
+			name = "FLOATING_PLATFORM";
+			break;
+
+		case BOX:
+			name = "BOX";
+			break;
+
+		case DEL:
+			name = "DELETE_MODE";
+			break;
+		}
+
+		ImGui::Text("Editor Mode:%s", name);
+		
+
+		ImGui::End();
 
 	}
 }
+

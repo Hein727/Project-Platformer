@@ -3,52 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\2240705\\Desktop\\Project-Platformer\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D22095F2-0FC3-424B-97D6-074B973AB293}|Game.vcxproj|C:\\Users\\2240705\\Desktop\\Project-Platformer\\Source\\Camera_Controller.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{D22095F2-0FC3-424B-97D6-074B973AB293}|Game.vcxproj|solutionrelative:Source\\Camera_Controller.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D22095F2-0FC3-424B-97D6-074B973AB293}|Game.vcxproj|C:\\Users\\2240705\\Desktop\\Project-Platformer\\Source\\Player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{D22095F2-0FC3-424B-97D6-074B973AB293}|Game.vcxproj|solutionrelative:Source\\Player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D22095F2-0FC3-424B-97D6-074B973AB293}|Game.vcxproj|C:\\Users\\2240705\\Desktop\\Project-Platformer\\Source\\Framework.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{D22095F2-0FC3-424B-97D6-074B973AB293}|Game.vcxproj|solutionrelative:Source\\Framework.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D22095F2-0FC3-424B-97D6-074B973AB293}|Game.vcxproj|C:\\Users\\2240705\\Desktop\\Project-Platformer\\Source\\LevelEditorTools.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{D22095F2-0FC3-424B-97D6-074B973AB293}|Game.vcxproj|solutionrelative:Source\\LevelEditorTools.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D22095F2-0FC3-424B-97D6-074B973AB293}|Game.vcxproj|C:\\Users\\2240705\\Desktop\\Project-Platformer\\Source\\Framework.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{D22095F2-0FC3-424B-97D6-074B973AB293}|Game.vcxproj|solutionrelative:Source\\Framework.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D22095F2-0FC3-424B-97D6-074B973AB293}|Game.vcxproj|C:\\Users\\2240705\\Desktop\\Project-Platformer\\Source\\Camera.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{D22095F2-0FC3-424B-97D6-074B973AB293}|Game.vcxproj|solutionrelative:Source\\Camera.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D22095F2-0FC3-424B-97D6-074B973AB293}|Game.vcxproj|C:\\Users\\2240705\\Desktop\\Project-Platformer\\Source\\SceneGame.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{D22095F2-0FC3-424B-97D6-074B973AB293}|Game.vcxproj|solutionrelative:Source\\SceneGame.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D22095F2-0FC3-424B-97D6-074B973AB293}|Game.vcxproj|C:\\Users\\2240705\\Desktop\\Project-Platformer\\Source\\SceneGame.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{D22095F2-0FC3-424B-97D6-074B973AB293}|Game.vcxproj|solutionrelative:Source\\SceneGame.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{D22095F2-0FC3-424B-97D6-074B973AB293}|Game.vcxproj|C:\\Users\\2240705\\Desktop\\Project-Platformer\\Source\\Level_Loader.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D22095F2-0FC3-424B-97D6-074B973AB293}|Game.vcxproj|solutionrelative:Source\\Level_Loader.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D22095F2-0FC3-424B-97D6-074B973AB293}|Game.vcxproj|C:\\Users\\2240705\\Desktop\\Project-Platformer\\Source\\Graphics\\Graphics.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{D22095F2-0FC3-424B-97D6-074B973AB293}|Game.vcxproj|solutionrelative:Source\\Graphics\\Graphics.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D22095F2-0FC3-424B-97D6-074B973AB293}|Game.vcxproj|C:\\Users\\2240705\\Desktop\\Project-Platformer\\Source\\Graphics\\Graphics.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{D22095F2-0FC3-424B-97D6-074B973AB293}|Game.vcxproj|solutionrelative:Source\\Graphics\\Graphics.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D22095F2-0FC3-424B-97D6-074B973AB293}|Game.vcxproj|C:\\Users\\2240705\\Desktop\\Project-Platformer\\Source\\LevelEditorTools.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{D22095F2-0FC3-424B-97D6-074B973AB293}|Game.vcxproj|solutionrelative:Source\\LevelEditorTools.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D22095F2-0FC3-424B-97D6-074B973AB293}|Game.vcxproj|C:\\Users\\2240705\\Desktop\\Project-Platformer\\Source\\Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{D22095F2-0FC3-424B-97D6-074B973AB293}|Game.vcxproj|solutionrelative:Source\\Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{D22095F2-0FC3-424B-97D6-074B973AB293}|Game.vcxproj|C:\\Users\\2240705\\Desktop\\Project-Platformer\\Source\\Level_Loader.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D22095F2-0FC3-424B-97D6-074B973AB293}|Game.vcxproj|solutionrelative:Source\\Level_Loader.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D22095F2-0FC3-424B-97D6-074B973AB293}|Game.vcxproj|C:\\Users\\2240705\\Desktop\\Project-Platformer\\Source\\Terrain_Material.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -62,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -70,171 +34,53 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Camera.cpp",
-              "DocumentMoniker": "C:\\Users\\2240705\\Desktop\\Project-Platformer\\Source\\Camera.cpp",
-              "RelativeDocumentMoniker": "Source\\Camera.cpp",
-              "ToolTip": "C:\\Users\\2240705\\Desktop\\Project-Platformer\\Source\\Camera.cpp",
-              "RelativeToolTip": "Source\\Camera.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-07-14T05:28:16.919Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Framework.cpp",
-              "DocumentMoniker": "C:\\Users\\2240705\\Desktop\\Project-Platformer\\Source\\Framework.cpp",
-              "RelativeDocumentMoniker": "Source\\Framework.cpp",
-              "ToolTip": "C:\\Users\\2240705\\Desktop\\Project-Platformer\\Source\\Framework.cpp",
-              "RelativeToolTip": "Source\\Framework.cpp",
-              "ViewState": "AgIAAM8AAAAAAAAAAAAAAOgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-07-14T05:26:03.818Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Framework.h",
-              "DocumentMoniker": "C:\\Users\\2240705\\Desktop\\Project-Platformer\\Source\\Framework.h",
-              "RelativeDocumentMoniker": "Source\\Framework.h",
-              "ToolTip": "C:\\Users\\2240705\\Desktop\\Project-Platformer\\Source\\Framework.h",
-              "RelativeToolTip": "Source\\Framework.h",
-              "ViewState": "AgIAABgAAAAAAAAAAADwvy8AAAAAAAAAAAAAAA==",
+              "Title": "Level_Loader.h",
+              "DocumentMoniker": "C:\\Users\\2240705\\Desktop\\Project-Platformer\\Source\\Level_Loader.h",
+              "RelativeDocumentMoniker": "Source\\Level_Loader.h",
+              "ToolTip": "C:\\Users\\2240705\\Desktop\\Project-Platformer\\Source\\Level_Loader.h",
+              "RelativeToolTip": "Source\\Level_Loader.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-07-14T05:26:03.062Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "LevelEditorTools.h",
-              "DocumentMoniker": "C:\\Users\\2240705\\Desktop\\Project-Platformer\\Source\\LevelEditorTools.h",
-              "RelativeDocumentMoniker": "Source\\LevelEditorTools.h",
-              "ToolTip": "C:\\Users\\2240705\\Desktop\\Project-Platformer\\Source\\LevelEditorTools.h",
-              "RelativeToolTip": "Source\\LevelEditorTools.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvw8AAAACAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-07-14T05:25:28.505Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Player.h",
-              "DocumentMoniker": "C:\\Users\\2240705\\Desktop\\Project-Platformer\\Source\\Player.h",
-              "RelativeDocumentMoniker": "Source\\Player.h",
-              "ToolTip": "C:\\Users\\2240705\\Desktop\\Project-Platformer\\Source\\Player.h",
-              "RelativeToolTip": "Source\\Player.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-07-14T05:25:08.477Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-17T06:06:05.933Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Camera_Controller.cpp",
-              "DocumentMoniker": "C:\\Users\\2240705\\Desktop\\Project-Platformer\\Source\\Camera_Controller.cpp",
-              "RelativeDocumentMoniker": "Source\\Camera_Controller.cpp",
-              "ToolTip": "C:\\Users\\2240705\\Desktop\\Project-Platformer\\Source\\Camera_Controller.cpp*",
-              "RelativeToolTip": "Source\\Camera_Controller.cpp*",
-              "ViewState": "AgIAAAMAAAAAAAAAAAASwBIAAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-07-14T05:23:22.429Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "SceneGame.h",
-              "DocumentMoniker": "C:\\Users\\2240705\\Desktop\\Project-Platformer\\Source\\SceneGame.h",
-              "RelativeDocumentMoniker": "Source\\SceneGame.h",
-              "ToolTip": "C:\\Users\\2240705\\Desktop\\Project-Platformer\\Source\\SceneGame.h",
-              "RelativeToolTip": "Source\\SceneGame.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-07-14T05:20:47.907Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Graphics.h",
-              "DocumentMoniker": "C:\\Users\\2240705\\Desktop\\Project-Platformer\\Source\\Graphics\\Graphics.h",
-              "RelativeDocumentMoniker": "Source\\Graphics\\Graphics.h",
-              "ToolTip": "C:\\Users\\2240705\\Desktop\\Project-Platformer\\Source\\Graphics\\Graphics.h",
-              "RelativeToolTip": "Source\\Graphics\\Graphics.h",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAACkAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-07-14T05:19:00.386Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Graphics.cpp",
-              "DocumentMoniker": "C:\\Users\\2240705\\Desktop\\Project-Platformer\\Source\\Graphics\\Graphics.cpp",
-              "RelativeDocumentMoniker": "Source\\Graphics\\Graphics.cpp",
-              "ToolTip": "C:\\Users\\2240705\\Desktop\\Project-Platformer\\Source\\Graphics\\Graphics.cpp",
-              "RelativeToolTip": "Source\\Graphics\\Graphics.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-07-14T05:18:59.757Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Terrain_Material.h",
-              "DocumentMoniker": "C:\\Users\\2240705\\Desktop\\Project-Platformer\\Source\\Terrain_Material.h",
-              "RelativeDocumentMoniker": "Source\\Terrain_Material.h",
-              "ToolTip": "C:\\Users\\2240705\\Desktop\\Project-Platformer\\Source\\Terrain_Material.h",
-              "RelativeToolTip": "Source\\Terrain_Material.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-07-14T05:17:16.774Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "LevelEditorTools.cpp",
-              "DocumentMoniker": "C:\\Users\\2240705\\Desktop\\Project-Platformer\\Source\\LevelEditorTools.cpp",
-              "RelativeDocumentMoniker": "Source\\LevelEditorTools.cpp",
-              "ToolTip": "C:\\Users\\2240705\\Desktop\\Project-Platformer\\Source\\LevelEditorTools.cpp",
-              "RelativeToolTip": "Source\\LevelEditorTools.cpp",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABgAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-07-14T05:16:50.535Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Player.cpp",
-              "DocumentMoniker": "C:\\Users\\2240705\\Desktop\\Project-Platformer\\Source\\Player.cpp",
-              "RelativeDocumentMoniker": "Source\\Player.cpp",
-              "ToolTip": "C:\\Users\\2240705\\Desktop\\Project-Platformer\\Source\\Player.cpp",
-              "RelativeToolTip": "Source\\Player.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-07-07T07:22:25.391Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
               "Title": "SceneGame.cpp",
               "DocumentMoniker": "C:\\Users\\2240705\\Desktop\\Project-Platformer\\Source\\SceneGame.cpp",
               "RelativeDocumentMoniker": "Source\\SceneGame.cpp",
               "ToolTip": "C:\\Users\\2240705\\Desktop\\Project-Platformer\\Source\\SceneGame.cpp",
               "RelativeToolTip": "Source\\SceneGame.cpp",
-              "ViewState": "AgIAAIcAAAAAAAAAAAAAAJoAAAADAAAAAAAAAA==",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAUwG0AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-07-07T07:22:17.814Z",
+              "WhenOpened": "2025-07-17T06:01:10.131Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Level_Loader.cpp",
+              "DocumentMoniker": "C:\\Users\\2240705\\Desktop\\Project-Platformer\\Source\\Level_Loader.cpp",
+              "RelativeDocumentMoniker": "Source\\Level_Loader.cpp",
+              "ToolTip": "C:\\Users\\2240705\\Desktop\\Project-Platformer\\Source\\Level_Loader.cpp",
+              "RelativeToolTip": "Source\\Level_Loader.cpp",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAAABAAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-07-17T04:33:08.022Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Terrain_Material.h",
+              "DocumentMoniker": "C:\\Users\\2240705\\Desktop\\Project-Platformer\\Source\\Terrain_Material.h",
+              "RelativeDocumentMoniker": "Source\\Terrain_Material.h",
+              "ToolTip": "C:\\Users\\2240705\\Desktop\\Project-Platformer\\Source\\Terrain_Material.h",
+              "RelativeToolTip": "Source\\Terrain_Material.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-07-15T01:20:57.235Z"
             }
           ]
         }

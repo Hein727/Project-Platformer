@@ -18,3 +18,4 @@ struct HitBox
 };
 HitBox LoadAABB(const Model* model);
 bool HitCheck(const HitBox& box1, const HitBox& box2);
+HitBox UpdateHitBox(HitBox& hitbox, DirectX::XMFLOAT3& pos, DirectX::XMFLOAT3& scale);

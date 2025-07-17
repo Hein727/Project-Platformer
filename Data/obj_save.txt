@@ -1,10 +1,80 @@
-namename
-position123
-rotation456
-scale789
+name BLOCK
+position -1.16786 -0.54078 0
+rotation 0 0 0
+scale 0.01 0.01 0.01
 
-namesomething
-position123
-rotation456
-scale789
+name BLOCK
+position -1.16786 -0.54078 0
+rotation 0 0 0
+scale 0.01 0.01 0.01
+
+name GROUND_BLOCK
+position 0.373944 -0.604063 0
+rotation 0 0 0
+scale 0.005 0.005 0.005
+
+name GROUND_BLOCK
+position 0.373944 -0.604063 0
+rotation 0 0 0
+scale 0.005 0.005 0.005
+
+name SLOPE
+position 1.81794 -0.184095 0
+rotation 0 0 0
+scale 0.01 0.01 0.01
+
+name SLOPE
+position 1.81794 -0.184095 0
+rotation 0 0 0
+scale 0.01 0.01 0.01
+
+name SPIKE
+position -3.33274 0.230725 0
+rotation 0 0 0
+scale 0.01 0.01 0.01
+
+name SPIKE
+position -3.33274 0.230725 0
+rotation 0 0 0
+scale 0.01 0.01 0.01
+
+name FLAG
+position -2.55753 -1.8297 0
+rotation 0 0 0
+scale 0.01 0.01 0.01
+
+name FLAG
+position -2.55753 -1.8297 0
+rotation 0 0 0
+scale 0.01 0.01 0.01
+
+name FLOATING_PLATFORM
+position 5.57421 0.310261 0
+rotation 0 0 0
+scale 0.01 0.01 0.01
+
+name FLOATING_PLATFORM
+position 5.58737 0.310261 0
+rotation 0 0 0
+scale 0.01 0.01 0.01
+
+name ARCHWAY
+position 1.83353 -1.73438 0
+rotation 0 0 0
+scale 0.005 0.005 0.005
+
+name ARCHWAY
+position 1.83353 -1.73438 0
+rotation 0 0 0
+scale 0.005 0.005 0.005
+
+name BOX
+position -6.26605 0.133724 0
+rotation 0 0 0
+scale 0.01 0.01 0.01
+
+name BOX
+position -6.26605 0.133724 0
+rotation 0 0 0
+scale 0.01 0.01 0.01
 

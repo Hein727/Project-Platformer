@@ -27,6 +27,14 @@ void Camera_Controller::Update(float elapsedTime)
 
 	cameraPos.x += ax * moveSpeed;
 	cameraPos.y += ay * moveSpeed;
+	if (GetAsyncKeyState('Z') & 0x8000)
+	{
+		cameraPos.z += 2.0f * elapsedTime;
+	}
+	if (GetAsyncKeyState('X') & 0x8000)
+	{
+		cameraPos.z -= 2.0f * elapsedTime;
+	}
 
 	cameraTarget = {
 		cameraPos.x,

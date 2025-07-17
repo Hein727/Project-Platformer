@@ -42,3 +42,30 @@ HitBox LoadAABB(const Model* model)
 
 	return box;
 }
+
+HitBox UpdateHitBox(HitBox& hitbox, DirectX::XMFLOAT3& pos, DirectX::XMFLOAT3& scale)
+{
+	DirectX::XMFLOAT3 scaledMax =
+	{
+		hitbox.max.x * scale.x > hitbox.min.x * scale.x ? hitbox.max.x * scale.x : hitbox.min.x * scale.x,
+		hitbox.max.y * scale.y > hitbox.min.y * scale.y ? hitbox.max.y * scale.y : hitbox.min.y * scale.y,
+		hitbox.max.z * scale.z > hitbox.min.z * scale.z ? hitbox.max.z * scale.z : hitbox.min.z * scale.z,
+	};
+
+	DirectX::XMFLOAT3 scaledMin =
+	{
+		hitbox.max.x * scale.x < hitbox.min.x * scale.x ? hitbox.max.x * scale.x : hitbox.min.x * scale.x,
+		hitbox.max.y * scale.y < hitbox.min.y * scale.y ? hitbox.max.y * scale.y : hitbox.min.y * scale.y,
+		hitbox.max.z * scale.z < hitbox.min.z * scale.z ? hitbox.max.z * scale.z : hitbox.min.z * scale.z,
+	};
+
+	hitbox.max.x = scaledMax.x + pos.x;
+	hitbox.max.y = scaledMax.y + pos.y;
+	hitbox.max.z = scaledMax.z + pos.z;
+
+	hitbox.min.x = scaledMin.x + pos.x;
+	hitbox.min.y = scaledMin.y + pos.y;
+	hitbox.min.z = scaledMin.z + pos.z;
+
+	return hitbox;
+}

@@ -44,6 +44,10 @@ private:
 	std::vector<FloatingPlatform> floatingplatforms;
 	std::vector<Box> boxes;
 
+#ifdef _DEBUG
+	int selected_type = 0;
+	DirectX::XMFLOAT3 cursorPos = { 0,0,0 };
+#endif
 
 };
 
@@ -56,5 +60,6 @@ enum LevelEditing
 	FLAG,
 	ARCHWAY,
 	FLOATINGPLATFORM,
-	BOX
+	BOX,
+	DEL
 };
