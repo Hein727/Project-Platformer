@@ -31,8 +31,6 @@ private:
 
 	std::unique_ptr<Stage> stage;
 
-	std::unique_ptr<Player> player;
-
 	/*Transform dummyCubeTransform;*/
 
 	std::vector<Block> blocks;

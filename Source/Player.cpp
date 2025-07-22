@@ -7,7 +7,9 @@
 
 Player::Player()
 {
-	model = std::make_unique<Model>("Data/Model/Mr.Incredible/Mr.Incredible.mdl");
+	model = std::make_unique<Model>("Data/Model/PlayerModel/Player.mdl");
+
+	model->PlayAnimation(0);
 
 	scale.x = scale.y = scale.z = 0.01f;
 
@@ -58,6 +60,8 @@ void Player::Update(float elapsedTime)
 
 	model->UpdateTransform(transform);
 }
+
+
 
 void Player::Render(ID3D11DeviceContext* dc, Shader* shader)
 {

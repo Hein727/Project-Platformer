@@ -15,7 +15,7 @@ void SceneGame::Initialize()
 {
 	stage = std::make_unique<Stage>();
 
-	player = std::make_unique<Player>();
+	Player& player = Player::Instance();
 
 	Level_Loader& levelLoader = Level_Loader::Instance();
 
@@ -83,9 +83,9 @@ void SceneGame::Initialize()
 		}
 		if (save.name == "PLAYER")
 		{
-			player->SetPosition(save.position);
-			player->SetRotation(save.rotation);
-			player->SetScale(save.scale);
+			player.SetPosition(save.position);
+			player.SetRotation(save.rotation);
+			player.SetScale(save.scale);
 		}
 	}
 	save_data.clear();
@@ -152,9 +152,11 @@ void SceneGame::Finalize()
 // XVˆ—
 void SceneGame::Update(float elapsedTime)
 {
+	Player& player = Player::Instance();
+
 	stage->Update(elapsedTime);
 
-	player->Update(elapsedTime);
+	player.Update(elapsedTime);
 
 #ifdef _DEBUG
 

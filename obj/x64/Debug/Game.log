@@ -1,38 +1,14 @@
 ﻿  AABBChecker.cpp
   Framework.cpp
   Geometry.cpp
+  Graphics.cpp
+  LambertShader.cpp
+  Model.cpp
+  Sprite.cpp
   LevelEditorTools.cpp
+  Main.cpp
   Player.cpp
   SceneGame.cpp
+  Stage.cpp
   Terrain_Material.cpp
-C:\Users\2240705\Desktop\Project-Platformer\Source\SceneGame.cpp(557,10): error C2665: 'ImGui::InputFloat3': オーバーロードされた関数ですべての引数の型を変換できませんでした
-      C:\Users\2240705\Desktop\Project-Platformer\External\imgui\imgui.h(515,29):
-      'bool ImGui::InputFloat3(const char *,float [],const char *,ImGuiInputTextFlags)' の可能性があります
-          C:\Users\2240705\Desktop\Project-Platformer\Source\SceneGame.cpp(557,10):
-          'bool ImGui::InputFloat3(const char *,float [],const char *,ImGuiInputTextFlags)': 引数 2 を 'float' から 'float []' へ変換できません。
-      C:\Users\2240705\Desktop\Project-Platformer\Source\SceneGame.cpp(557,10):
-      引数リスト '(const char [12], float)' を一致させようとしているとき
-  
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3309,9): error C2248: 'Player::~Player': private メンバー (クラス 'Player' で宣言されている) にアクセスできません。
-  (ソース ファイル 'Source/Framework.cpp' をコンパイルしています)
-      C:\Users\2240705\Desktop\Project-Platformer\Source\Player.h(56,1):
-      コンパイラが 'Player::~Player' をここに生成しました。
-      C:\Users\2240705\Desktop\Project-Platformer\Source\Player.h(8,7):
-      'Player' の宣言を確認してください
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3309,9):
-      テンプレートインスタンス化コンテキスト (最初に最も古いもの) は
-          C:\Users\2240705\Desktop\Project-Platformer\Source\SceneGame.h(34,26):
-          コンパイル対象の クラス テンプレート インスタンス化 'std::unique_ptr<Player,std::default_delete<Player>>' のリファレンスを確認してください
-          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3352,92):
-          コンパイル対象の クラス テンプレート インスタンス化 'std::default_delete<Player>' のリファレンスを確認してください
-          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3307,23):
-          クラス テンプレート メンバー関数 'void std::default_delete<Player>::operator ()(_Ty *) noexcept const' のコンパイル中
-          with
-          [
-              _Ty=Player
-          ]
-              C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3427,33):
-              'std::unique_ptr<Player,std::default_delete<Player>>::~unique_ptr' の 'std::default_delete<Player>::operator ()' への最初の参照を参照してください
-              C:\Users\2240705\Desktop\Project-Platformer\Source\SceneGame.h(14,14):
-              'SceneGame::SceneGame' の 'std::unique_ptr<Player,std::default_delete<Player>>::~unique_ptr' への最初の参照を参照してください
-  
+  Game.vcxproj -> C:\Users\2240705\Desktop\Project-Platformer\bin\x64\Debug\Game.exe
