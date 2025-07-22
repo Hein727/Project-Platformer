@@ -27,19 +27,19 @@ public:
 	}
     void UpdateTransform();
 
-    virtual void Render(ID3D11DeviceContext* dc, Shader* shader)
-    {
-        if (!model) return;
-        shader->Draw(dc, model.get());
-    }
+    virtual void Render(ID3D11DeviceContext* dc, Shader* shader);
 
     void SetPosition(const DirectX::XMFLOAT3& pos) { position = pos; box = UpdateHitBox(box, position, scale);}
     void SetScale(const DirectX::XMFLOAT3& scale) { this->scale = scale; box = UpdateHitBox(box, position, this->scale);}
     void SetRotation(const DirectX::XMFLOAT3& rotation) { this->rotation = rotation;}
+    void SetIsMoving(const bool isMoving) { this->isMoving = isMoving; }
+    void SetRangeOfMovement(const float rangeOfMovement) { this->rangeOfMovement = rangeOfMovement; }
 
     auto GetPosition() const { return position; }
     auto GetRotation() const { return rotation; }
     auto GetScale() const { return scale; }
+    auto GetIsMoving() const { return isMoving; }
+    auto GetRangeOfMovement() const { return rangeOfMovement; }
 
     HitBox getHitBox() { return this->box; }
 
@@ -55,4 +55,7 @@ protected:
                     0,0,1,0,
                     0,0,0,1
     };
+    bool renderCheck = false;
+    bool isMoving = false;
+    float rangeOfMovement = 0.0f;
 };

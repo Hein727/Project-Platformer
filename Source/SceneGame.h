@@ -47,6 +47,14 @@ private:
 #ifdef _DEBUG
 	int selected_type = 0;
 	DirectX::XMFLOAT3 cursorPos = { 0,0,0 };
+
+	struct Object
+	{
+		DirectX::XMFLOAT3 position;
+		DirectX::XMFLOAT3 rotation;
+		DirectX::XMFLOAT3 scale;
+	};
+	Object obj;
 #endif
 
 };

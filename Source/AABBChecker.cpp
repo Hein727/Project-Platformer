@@ -69,3 +69,9 @@ HitBox UpdateHitBox(HitBox& hitbox, DirectX::XMFLOAT3& pos, DirectX::XMFLOAT3& s
 
 	return hitbox;
 }
+
+bool HitCheckForJump(const HitBox& box1, const HitBox& box2)
+{
+	if (box1.max.y < box2.min.y || box1.min.y > box2.max.y) return true;
+	return false;
+}

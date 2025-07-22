@@ -553,10 +553,8 @@ void SceneGame::Render()
 		}
 
 		ImGui::Text("Editor Mode:%s", name);
-		
 
 		ImGui::End();
 
 	}
 }
-

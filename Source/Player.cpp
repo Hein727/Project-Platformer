@@ -10,6 +10,10 @@ Player::Player()
 	model = std::make_unique<Model>("Data/Model/Mr.Incredible/Mr.Incredible.mdl");
 
 	scale.x = scale.y = scale.z = 0.01f;
+
+	box = LoadAABB(model.get());
+
+	box = UpdateHitBox(box, position, scale);
 }
 
 void Player::Update(float elapsedTime)
@@ -36,19 +40,13 @@ void Player::Update(float elapsedTime)
 
 	if (GetAsyncKeyState(VK_SPACE) & 0x8000 && !isJumping)
 	{
+		lastPos = position;
 		velocityY = jumpForce;
 		isJumping = true;
 	}
 
 	velocityY += gravity * elapsedTime;
 	position.y += velocityY * elapsedTime;
-
-	if (position.y <= 0.0f)
-	{
-		position.y = 0.0f;
-		velocityY = 0.0f;
-		isJumping = false;
-	}
 
 	camera_controller.SetTarget(position);
 	camera_controller.Update(elapsedTime);
